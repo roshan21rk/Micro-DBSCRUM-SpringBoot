@@ -1,2 +1,2 @@
-# Micro-DBSCRUM-SpringBoot
-SCRUM project DbService
+# Micro-SpringBoot Projects 2018
+Micro-Spring Boot Projects
