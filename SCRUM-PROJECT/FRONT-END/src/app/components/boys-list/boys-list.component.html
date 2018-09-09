@@ -1,0 +1,25 @@
+
+<button class="btn btn-secondary mb-10"><a routerLink=''>Back</a></button>
+<table class="table table-sm table-hover">
+  <thead> List Of Boys</thead>
+<th> Sequence Id</th>
+<th> FirstName</th>
+<th> LastName Id</th>
+<th>Profession</th>
+  <tr *ngFor="let boys of boysList">
+      
+    <td> {{boys.id}} </td> 
+    <td>{{boys.firstname}}</td>
+    <td>{{boys.lastname}}</td>
+    <td> {{boys.profession}}</td>
+
+    <td>
+      <a class="btn" [routerLink]="['/updateData',boys.id]">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(boys)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>

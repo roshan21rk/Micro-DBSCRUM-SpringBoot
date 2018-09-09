@@ -1,0 +1,23 @@
+
+
+input {
+
+  align-self: auto;
+  margin: 5px 10px 12px 8px;
+  padding: 12px 0px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-color: black;
+  box-align: left;
+
+}
+
+div.form-group {
+  width: 100%;
+}
+
+
+
+
+

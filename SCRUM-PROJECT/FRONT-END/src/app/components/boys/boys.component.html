@@ -1,0 +1,65 @@
+<form  class="emp-form" #boysform="ngForm" (ngSubmit)="onSubmit(boysform)">
+  <input type="hidden" name="id" #BoysId="ngModel" [(ngModel)]="boysService.selectedBoy.id">
+
+<!-- 
+  <div class="form-group col-md-20">
+  <input type="text" class="form-control" name="id" placeholder="Sequence ID" #id="ngModel" [(ngModel)]="boysService.selectedBoy.id" required>
+  <div class="validation-error" *ngIf="id.invalid && id.touched"> This field is Required.</div>
+  </div> -->
+
+  <div class="form-row">
+  <div class="form-group col-md-6">
+    <input  class="form-control" name="firstname" placeholder="FirstName" #firstname="ngModel" [(ngModel)]="boysService.selectedBoy.firstname" required>
+    <div class="validation-error" *ngIf="firstname.invalid && firstname.touched"> This field is Required.</div>
+  </div>
+  <div class="form-group col-md-6">
+    <input class="form-control" name="lastname" placeholder="LastName" #lastname="ngModel" [(ngModel)]="boysService.selectedBoy.lastname" required>
+    <div class="validation-error" *ngIf="lastname.invalid && lastname.touched"> This field is Required.</div>
+  </div>
+
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="city" #city="ngModel" placeholder="City" [(ngModel)]="boysService.selectedBoy.city" required>
+      <div class="validation-error" *ngIf="city.invalid && city.touched"> This field is Required.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="phone" placeholder="Phone Number" #phone="ngModel" [(ngModel)]="boysService.selectedBoy.phone" required>
+      <div class="validation-error" *ngIf="phone.invalid && phone.touched"> This field is Required.</div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="age" placeholder="Age" #age="ngModel" [(ngModel)]="boysService.selectedBoy.age" required>
+      <div class="validation-error" *ngIf="age.invalid && age.touched"> This field is Required.</div>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="status" placeholder="Status" #status="ngModel" [(ngModel)]="boysService.selectedBoy.status" required>
+      <div class="validation-error" *ngIf="status.invalid && status.touched"> This field is Required.</div>
+    </div>
+  </div>
+
+  <div class="form-group col-md-20">
+    <input type="text" class="form-control" name="profession" placeholder="Profession" #profession="ngModel" [(ngModel)]="boysService.selectedBoy.profession" required>
+    <div class="validation-error" *ngIf="profession.invalid && profession.touched"> This field is Required.</div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <button [disabled]="!boysform.valid" type="submit" class="btn btn-lg btn-block btn-info"> <i class="fa fa-save"></i> Submit </button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="onReset(boysform)"><i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+
+  
+    <div class="form-group col-md-20">
+    <button type="button" class="btn btn-lg btn-block btn-secondary"><a routerLink="/List">Show Lists </a></button>
+    
+    </div>
+
+</form>
