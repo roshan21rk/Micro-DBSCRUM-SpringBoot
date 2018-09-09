@@ -17,7 +17,7 @@ import com.roshan.mess.dbScrumservice.Service.BoysService;
 
 @RestController
 @RequestMapping(value="/Scrum")
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="*")
 public class BoysDetailsController {
 	
 	@Autowired
@@ -32,7 +32,7 @@ public class BoysDetailsController {
 	}
 	
 	//Add Detail
-	@CrossOrigin(origins="http://localhost:4200")
+	//@CrossOrigin(origins="http://localhost:4200")
 	@RequestMapping(value="/Add", method=RequestMethod.POST)
 	public void addBoysDetails(@RequestBody Boys boysdetails)
 	{
@@ -40,7 +40,7 @@ public class BoysDetailsController {
 	}
 
 	//Get by Id 
-	@CrossOrigin(origins="http://localhost:4200",maxAge = 3600)
+	//@CrossOrigin(origins="http://localhost:4200",maxAge = 3600)
 	@RequestMapping(value="/view/{id}", method=RequestMethod.GET)
 	public Optional<Boys> getbyID(@PathVariable("id") int id)
 	{
@@ -49,14 +49,14 @@ public class BoysDetailsController {
 	
 	
 	//Update Details
-	@CrossOrigin(origins="http://localhost:4200", maxAge = 3600)
+	//@CrossOrigin(origins="http://localhost:4200", maxAge = 3600)
 	@RequestMapping(value="/update/{id}", method=RequestMethod.PUT)
 	public void updateBoysDetails(@PathVariable("id") int id, @RequestBody Boys boysdetails)
 	{
 		this.service.updateBoysDetails(id, boysdetails);
 	}
 	//Delete Details
-	@CrossOrigin(origins="http://localhost:4200", maxAge = 3600)
+	//@CrossOrigin(origins="http://localhost:4200", maxAge = 3600)
 	@RequestMapping(value="/delete/{id}", method=RequestMethod.DELETE)
 	public void deleteBosyDetails(@PathVariable("id") int id)
 	{
